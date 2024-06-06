@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .del {
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+
+        .edit {
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            padding: 5px 20px;
+        }
+
+        .table {
+            background-color: rgba(135, 222, 197, 0.787);
+            border-radius: 10px;
+        }
+
+        .table .button {
+            padding:30px 0px ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <%- include('./partial/header.ejs') %>
+
+
+        <div class="container text-center mt-4">
+            <h1>Your Book List</h1>
+            <table class="table  col-md-12 table-bordered">
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Publish-Date</th>
+                    <th>Action</th>
+                </tr>
+
+                <% data.map((val)=>{ %>
+
+                    <tr>
+                        <td>
+                            <img src="<%= val.image %>" alt="image" width="100px">
+                        </td>
+                        <td>
+                            <%= val.title %>
+                        </td>
+                        <td>
+                            <%= val.author %>
+                        </td>
+                        <td>
+                            <%= val.date %>
+                        </td>
+                        <td class="button">
+                            <a href="/deleteData/<%= val._id %>" class="del">Delete</a>
+                            <a href="/editData/<%= val._id %>" class="edit">Edit</a>
+                        </td>
+                    </tr>
+
+                    <% })%>
+            </table>
+        </div>
+
+</body>
+
+</html>

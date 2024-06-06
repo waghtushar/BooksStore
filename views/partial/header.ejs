@@ -1,0 +1,62 @@
+<style>
+       body {
+            font-family: 'sans-serif';  
+            background-color:white;
+            background-image: url(/logo.png);
+            background-position:top;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .nav-link {
+            color: #333 !important;
+        }
+
+        .nav-link:hover {
+            color: #ff4081 !important;
+        }
+         
+        h1  {
+            color: #ff4081;
+            text-align: center;
+            font-weight: bold;
+        }
+    header {
+        background: linear-gradient(180deg, rgb(238, 224, 174) 0%, rgb(233, 148, 148));
+        box-shadow: 0 1px 3px rgb(47, 255, 217);
+    }
+
+    form .form-control {
+        border-radius: 20px;
+        padding: 20px 120px;
+    }
+
+    form .btn-outline-pink {
+        border: 2px solid #40ffa9;
+        color: black;
+        border-radius: 0px 10px 0px 10px;
+    }
+
+    form .btn-outline-pink:hover {
+        background-color: aqua;
+        color: #fff;
+    }
+</style>
+<header class="">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="/">Book Store</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search by book title"
+                        aria-label="Search">
+                    <button class="btn btn-outline-pink  my-sm-0" type="submit">Search</button>
+                </form>
+                <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/view">View</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add">Add</a></li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
